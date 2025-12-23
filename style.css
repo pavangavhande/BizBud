@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding-top: 8vh;
+     font-family: "Lexend Deca", sans-serif;
+}
+.nav1{
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: white;
+    padding: 0 2vw;
+}
+
+.logo{
+    font-size: 1.5rem;
+}
+
+.nav-center{
+    display: flex;
+    gap: 1.5vw;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-center a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 300;
+}
+
+.nav-center a:hover{
+    color: #9E3FFD;
+    transition: 0.3s;
+}
+.call-btn{
+    padding: 1vh 2vw;
+    background-color: #9E3FFD;
+    color: white;
+    border: none;
+    border-radius: 1.2vw;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.Home img{
+ position: sticky;
+    top: 8vh; 
+    width: 100%;
+    height: calc(100vh - 8vh);
+    object-fit: cover;
+    display: block;
+}
+.Home{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%; 
+    z-index: 1;
+}
+
+.parallax-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content{
+    position: relative;
+    z-index: 2;
+    top: 15%;
+    left: 10%;
+
+    transform: translateY(40px); 
+    opacity: 0;                   
+
+    animation: showUp 1s ease forwards;
+}
+
+@keyframes showUp{
+    to{
+        transform: translateY(0); 
+        opacity: 1;            
+    }
+}
+
+.content h2{
+    font-size: 6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content p{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.content button{
+    padding: 1.5vh 2.2vw;
+    background-color: #9E3FFD;
+    color: white;
+    border: none;
+    border-radius: 2vh;
+    font-size: 1rem;
+    cursor: pointer; 
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 300;
+}
+#serv{
+    min-height: 80vh;
+    background: #ffffff;
+    padding: 4rem 2rem;
+}
+
+.service{
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+    margin-bottom: 3rem;
+}
+
+.service h3{
+    color: #9E3FFD;
+    font-weight: 400;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 21rem;           
+    margin-top: -40px;      
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 280px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+    border-radius: 12px;
+    color: rgb(0, 0, 0);
+
+}
+
+.card h3{
+    margin-bottom: 1rem;
+}
+.card p{
+    color: #444445;
+}
+.card img{
+    width: 200px;
+    margin-bottom: 1rem;
+}
+.details {
+    height: 55vh;
+    width: 100%;
+    background-color: #16163F;
+    color: white;
+    font-family: "Lexend Deca", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details h2 {
+    font-size: 2rem;
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.info1 {
+    text-align: center;
+}
+
+.info1 h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.info1 p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.dot {
+    font-size: 2rem;
+}
+#about{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    gap: 14vw;
+}
+
+.about-left{
+    width: 30%;
+    padding: 10vh 4vw;
+    margin-left: 6vw;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.about-left h3{
+    color: #8b5cf6;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.about-left h1{
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.about-left p{
+    line-height: 1.9rem;
+    margin-top: 20px;
+    color: #787878;
+}
+.about-right{
+    width: 55%;
+}
+
+.about-right img{
+    width: 120%;
+    height: 120%;
+}
