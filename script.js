@@ -1,16 +1,16 @@
-let dots = document.querySelectorAll(".dot");
-let index = 0;
 
-function showSlide(i) {
-    dots.forEach(dot => dot.classList.remove("active"));
+const reveals = document.querySelectorAll(".reveal");
 
-    dots[i].classList.add("active");
-}
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); // ONE TIME ONLY
+        }
+    });
+}, {
+    threshold: 0.2
+});
 
-setInterval(() => {
-    index++;
-    if (index >= slides.length) {
-        index = 0;
-    }
-    showSlide(index);
-}, 3000);
+reveals.forEach(el => observer.observe(el));
+
